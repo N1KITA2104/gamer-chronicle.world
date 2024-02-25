@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 434.83 508.01">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_Безымянный_градиент_12);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#_Безымянный_градиент_9);
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: url(#_Безымянный_градиент_16);
+      }
+
+      .cls-5 {
+        fill: url(#_Безымянный_градиент_13);
+      }
+
+      .cls-6 {
+        fill: url(#_Безымянный_градиент_10);
+      }
+
+      .cls-7 {
+        fill: url(#_Безымянный_градиент_14);
+      }
+
+      .cls-8 {
+        fill: url(#_Безымянный_градиент_13-2);
+      }
+
+      .cls-9 {
+        fill: url(#_Безымянный_градиент_15);
+      }
+
+      .cls-10 {
+        fill: url(#_Безымянный_градиент_12-2);
+      }
+
+      .cls-11 {
+        fill: url(#_Безымянный_градиент_11);
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент_11" data-name="Безымянный градиент 11" x1="0" y1="177.56" x2="434.83" y2="177.56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a34e4b"/>
+      <stop offset=".51" stop-color="#be5451"/>
+      <stop offset="1" stop-color="#d55957"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_9" data-name="Безымянный градиент 9" x1="7.4" y1="262.41" x2="194.76" y2="367.12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ca544c"/>
+      <stop offset="1" stop-color="#d4534b"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_10" data-name="Безымянный градиент 10" x1="244.98" y1="364.91" x2="431.37" y2="253.03" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c8544c"/>
+      <stop offset=".36" stop-color="#b9514b"/>
+      <stop offset="1" stop-color="#a34e4a"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_12" data-name="Безымянный градиент 12" x1="88.63" y1="53.63" x2="346.2" y2="53.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d55852"/>
+      <stop offset=".35" stop-color="#c7544f"/>
+      <stop offset="1" stop-color="#b14f4c"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_12-2" data-name="Безымянный градиент 12" y1="52.36" y2="52.36" xlink:href="#_Безымянный_градиент_12"/>
+    <linearGradient id="_Безымянный_градиент_15" data-name="Безымянный градиент 15" x1="259.05" y1="316.56" x2="391.3" y2="316.56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d65a60"/>
+      <stop offset=".44" stop-color="#d96b74"/>
+      <stop offset="1" stop-color="#dd7e8b"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_14" data-name="Безымянный градиент 14" x1="46.7" y1="306.14" x2="160.49" y2="369.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d65a60"/>
+      <stop offset=".35" stop-color="#d7646d"/>
+      <stop offset="1" stop-color="#db7684"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_13" data-name="Безымянный градиент 13" x1="87.89" y1="99.87" x2="345.49" y2="99.87" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d55958"/>
+      <stop offset=".63" stop-color="#dd7d85"/>
+      <stop offset="1" stop-color="#e1909c"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_16" data-name="Безымянный градиент 16" x1="174.06" y1="153.53" x2="195.01" y2="153.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d8636e"/>
+      <stop offset="1" stop-color="#d8636e"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_13-2" data-name="Безымянный градиент 13" x1="240.19" y1="154.92" x2="260.97" y2="154.92" xlink:href="#_Безымянный_градиент_13"/>
+  </defs>
+  <polygon class="cls-11" points="0 130.07 217.44 253.25 434.83 130.07 388.83 101.87 260.7 180.69 240.25 165.85 259.72 153.53 240.25 141.12 261.03 129.15 217.42 101.87 174.12 127.7 195.07 140.13 175.37 154.49 194.41 164.2 174.96 179.37 42.38 101.87 0 130.07"/>
+  <polygon class="cls-2" points="217.44 253.25 217.44 508.01 63.32 415.5 63.32 242.03 151.54 291.17 151.54 341.63 108.01 317.23 107.68 391.76 171.99 429.03 171.99 277.65 41.72 201.14 41.72 405.61 0 379.46 0 130.07 217.44 253.25"/>
+  <polygon class="cls-6" points="217.44 508.01 368.21 417.15 368.21 240.71 282.47 290.51 282.47 340.97 325.67 315.25 325.34 391.43 259.05 431.99 259.38 279.63 391.3 201.14 391.3 405.28 434.83 378.9 434.83 130.07 217.44 253.25 217.44 508.01"/>
+  <polygon class="cls-1" points="88.63 79.43 131.18 103.5 216.87 52.05 304.75 105.99 346.2 80 216.87 1.26 88.63 79.43"/>
+  <polygon class="cls-10" points="88.63 78.16 131.18 102.24 216.87 50.79 304.75 104.73 346.2 78.74 216.87 0 88.63 78.16"/>
+  <path class="cls-9" d="M259.38,279.63l-.13,61.43h20.49v51.2l-20.63,10.72-.06,29.01,66.3-40.56.33-76.18-43.21,25.71v-50.45l85.75-49.8v164.56h23.08v-204.14l-131.92,78.49ZM346.2,242.61h-18.31l18.31-11.14v11.14Z"/>
+  <path class="cls-7" d="M171.98,341.06v-63.4L41.72,201.13v204.47h21.61v-163.58l88.22,49.14v50.45l-43.54-24.4-.33,74.54,64.31,37.27v-23.75l-17.89-13.77v-50.45h17.89ZM87.32,242.61v-11.14l18.29,11.14h-18.29Z"/>
+  <polygon class="cls-3" points="105.61 242.61 87.32 242.61 87.32 231.47 105.61 242.61"/>
+  <polyline class="cls-5" points="346.2 78.82 304.75 104.81 216.87 50.87 131.18 102.32 88.63 78.24 88.66 78 88.66 125.12 129.86 148.87 217.42 95.93 302.75 148.87 346.23 123.64 346.23 78.57"/>
+  <polygon class="cls-4" points="174.12 127.7 174.96 179.37 194.41 164.2 175.37 154.49 195.07 140.13 174.12 127.7"/>
+  <polygon class="cls-8" points="261.03 129.15 260.7 180.69 240.25 165.85 259.72 153.53 240.25 141.12 261.03 129.15"/>
+</svg>
