@@ -42,7 +42,7 @@ if (empty($_SESSION['user_id'])) {
                 $stmt->bind_param("sss", $login, $password_hash, $email);
 
                 if ($stmt->execute()) {
-                    header("Location: index.php?action=RegistrationSuccessful");
+                    echo '<script>window.location.href = "index.php?action=RegistrationSuccessful"</script>';
                     exit();
                 } else {
                     echo "Error: " . $stmt->error;
