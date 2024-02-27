@@ -1,4 +1,6 @@
-<?php $post_id = intval($_GET['id'])?>
+<?php 
+$post_id = intval($_GET['id']);
+?>
 
 <article>
     <h3 class="bg-dark p-3 text-light"
@@ -30,7 +32,13 @@
 <script>
     function addComment() {
         let post_id = <?php echo $post_id; ?>;
-        let comment = document.getElementById('comment').value;
+        let comment = document.getElementById('comment').value.trim(); // Удаляем лишние пробелы в начале и в конце
+
+        // Проверяем, что комментарий не пустой
+        if (comment === "") {
+            alert("Порожній коментар не може бути доданий.");
+            return; // Прерываем функцию, чтобы комментарий не был отправлен
+        }
 
         $.ajax({
             url: 'views/AddComments.php',
@@ -85,7 +93,6 @@
             });
         }
     }
-
 
     window.onload = function() {
         getComments();

@@ -21,11 +21,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.tiny.cloud/1/9ynnskjjrruo3rgce97qgkr5mpxmz6ijdrw0gn01nea6m7e8/tinymce/6/tinymce.min.js" referrerpolicy="origin" defer></script>
+    <script src="https://cdn.tiny.cloud/1/9ynnskjjrruo3rgce97qgkr5mpxmz6ijdrw0gn01nea6m7e8/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="js/editor.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
-    <script src="js/scrollToTop.js" defer></script>
-    <script src="js/scrollProgress.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/scrollToTop.js"></script>
+    <script src="js/scrollProgress.js"></script>
 </head>
 
 <body>

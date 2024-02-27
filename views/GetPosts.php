@@ -10,7 +10,7 @@ if (isset($_GET['id']) && isset($_GET['page'])) {
     $user_id = intval($_GET['id']);
     $page = intval($_GET['page']);
 
-    $postsPerPage = 2;
+    $postsPerPage = 6;
     $offset = $page * $postsPerPage;
 
     $query = "SELECT 

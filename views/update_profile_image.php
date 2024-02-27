@@ -16,9 +16,16 @@ if (isset($_FILES['profile_image'])) {
     $maxFileSize = 2 * 1024 * 1024; // 2 МБ в байтах
 
     if (in_array($extension, $allowedExtensions) && $newImg['size'] <= $maxFileSize) {
-        $newImgName = uniqid() . '.' . $extension;
+        // Преобразование изображения в WebP
+        $image = imagecreatefromstring(file_get_contents($newImg['tmp_name']));
+        $newImgName = uniqid() . '.webp';
         $uploadPath = $uploadDir . $newImgName;
+        imagewebp($image, $uploadPath);
 
+        // Очистка памяти от исходного изображения
+        imagedestroy($image);
+
+        // Обновление записи в базе данных
         $query = "SELECT img FROM users WHERE user_id =" . $user_id;
         $result = mysqli_query($db, $query);
 
@@ -34,18 +41,14 @@ if (isset($_FILES['profile_image'])) {
             }
         }
 
-        if (move_uploaded_file($newImg['tmp_name'], $uploadPath)) {
-            $updateQuery = "UPDATE users SET img='$newImgName' WHERE user_id=$user_id";
-            if (mysqli_query($db, $updateQuery)) {
-                echo json_encode(array('status' => 'success', 'message' => 'Фото успішно оновлено.'));
-            } else {
-                echo json_encode(array('status' => 'error', 'message' => 'Помилка при оновленні фото ' . mysqli_error($db)));
-            }
+        $updateQuery = "UPDATE users SET img='$newImgName' WHERE user_id=$user_id";
+        if (mysqli_query($db, $updateQuery)) {
+            echo json_encode(array('status' => 'success', 'message' => 'Фото успешно обновлено.'));
         } else {
-            echo json_encode(array('status' => 'error', 'message' => 'Помилка при завантаженні файлу'));
+            echo json_encode(array('status' => 'error', 'message' => 'Ошибка при обновлении фото ' . mysqli_error($db)));
         }
     } else {
-        echo json_encode(array('status' => 'error', 'message' => 'Формат зображення, що не підтримується, або розмір файлу перевищує 2 МБ. Формати, що підтримуються: JPG, JPEG, PNG, GIF.'));
+        echo json_encode(array('status' => 'error', 'message' => 'Формат изображения не поддерживается или размер файла превышает 2 МБ. Поддерживаемые форматы: JPG, JPEG, PNG, GIF.'));
     }
 }
 ?>

@@ -1,4 +1,4 @@
-<main class="container bg-light p-5">
+<main class="container bg-light p-3">
     <article>
         <section class="display-4 bg-dark text-light p-4 mb-3"
                  style="border-bottom: 10px solid #D96C6C;

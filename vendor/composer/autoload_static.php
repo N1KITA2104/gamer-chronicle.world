@@ -28,6 +28,7 @@ class ComposerStaticInitfb9f629fe8337560dd413e7a6ac6cb57
         'P' => 
         array (
             'Psr\\Clock\\' => 10,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'C' => 
         array (
@@ -64,6 +65,10 @@ class ComposerStaticInitfb9f629fe8337560dd413e7a6ac6cb57
         'Psr\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Carbon\\Doctrine\\' => 
         array (

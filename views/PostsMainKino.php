@@ -30,7 +30,7 @@ $result = mysqli_query($db, $query);
                     <img class="news-image" loading="lazy" src="<?= $row['post_photo'] ?>" alt="<?= strip_tags($row['post_title']) ?>">
                 </a>
             </div>
-            <div class="news-caption">
+            <div class="news-caption description">
                 <a href="index.php?action=ViewPost&id=<?= $row['post_id'] ?>"><?= strip_tags($row['post_title']) ?></a>
             </div>
 
@@ -45,7 +45,7 @@ $result = mysqli_query($db, $query);
                 </div>
             <?php endif; ?>
 
-            <div class="post-info-footer row">
+            <div class="post-info-footer row description">
                 <div class="col-sm-10 d-flex flex-column justify-content-center">
                     <span class="d-inline-flex"><?= !empty($authorImg) ? '<img class="rounded-circle" height="16px" width="16px" src="uploads/profiles/' . $authorImg . '" alt="Profile Picture"> ' : '<img class="rounded-circle" height="30px" width="30px" src="img/user-ico.png" alt="Profile Picture"> ' ?><a href="index.php?action=profile&id=<?= $row['author_id'] ?>" title="Автор посту"><?= $authorName ?></a></span>
                     <span class="d-inline-flex" title="Дата та час публікації"><img src="img/clock-icon.svg" height="16px" width="16px" alt="Дата: "><?= $formattedDate ?></span>

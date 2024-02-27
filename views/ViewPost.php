@@ -45,26 +45,27 @@ if ($post_time->isToday()) {
 
 ?>
 
-<main class="container bg-light p-5 pb-3 mb-5 rounded">
-    <article class="pe-5">
-        <header class="bg-dark text-light p-3 ps-4"
+<main class="container bg-light p-3 pb-3 mb-5">
+    <article class="">
+        <header class="bg-dark text-light p-3 m-2 me-5"
                 style="border-bottom: 10px solid #D96C6C;
                        border-left: 10px solid transparent;">
             <h2 class="display-6"><?php echo $row['post_title']; ?></h2>
         </header>
-        <section class="mb-3 mt-3">
-            <div class="text-center">
+        <section class="mb-3 mt-3 p-2">
+            <div class="text-center p
+            me-5">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo $row['post_photo']; ?>" alt="<?php echo $row['post_title']; ?>" class="img-fluid rounded-top" style="width: 100vw">
+                    <img src="<?php echo $row['post_photo']; ?>" alt="<?php echo $row['post_title']; ?>" class="img-fluid" style="width: 100vw">
                 </div>
             </div>
-            <section class="bg-dark p-3 text-light post-details mb-3">
+            <section id="post-title" class="bg-dark description text-light p-3 post-details mb-3 me-5">
                 <img src="img/author.svg" height="20px" alt="Автор: "><span><a class="footer-link" href="index.php?action=Profile&id=<?php echo $row['author_id']; ?>"><?php echo $row['author_name']; ?></a></span><br>
                 <img src="img/clock-icon.svg" height="20px" alt="Дата: "><span> <?php echo $formattedDate ?></span>
             </section>
             <h6 class="mb-3"><?php echo $row['post_description']; ?></h6>
             <hr>
-            <div class="container-fluid"><?php echo $row['post_article']; ?></div>
+            <div id="post-article" class="container-fluid"><?php echo $row['post_article']; ?></div>
         </section>
     </article>
 
@@ -91,7 +92,7 @@ if ($post_time->isToday()) {
             $statement->close();
         }
         ?>
-        <section class="mb-3 col d-flex flex-column align-items-center section-container p-3">
+        <section class="mb-3 col d-flex flex-column align-items-center section-container p-2 mt-3">
             <?php if (!empty($_SESSION) && $_SESSION['user_access_type'] === 1): ?>
                 <button class="btn btn-danger mb-2" title="Редагувати пост" onclick="window.location.href = 'index.php?action=EditPost&id=<?php echo $row['post_id']; ?>';"><i class="fas fa-edit"></i></button>
                 <button class="btn btn-danger mb-2" id="deleteForm" title="Видалити пост" onclick="window.location.href = 'index.php?action=ConfirmDeletePost&id=<?php echo $row['post_id']; ?>';"><i class="fas fa-trash-alt"></i> </button>
@@ -109,7 +110,7 @@ if ($post_time->isToday()) {
                 </span>
             </div>
                 <?php if ($reaction !== null) : ?>
-                    <button class="btn btn-danger mt-2" id="cancelVoteBtn" title="Відмінити голос" onclick="vote('cancel')"><i class="fas fa-times"></i></button>
+                    <button class="btn btn-danger mt-2" id="cancelVoteBtn" title="Відмінити голос" onclick="vote('cancel')"><i class="fas fa-times p-1"></i></button>
                 <?php endif; ?>
             <?php endif; ?>
         </section>

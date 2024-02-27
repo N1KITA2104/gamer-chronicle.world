@@ -44,7 +44,7 @@ if (isset($_FILES['post_photo']) && $_FILES['post_photo']['error'] === 0) {
         $uniqueFilename = uniqid() . '_' . $_FILES['post_photo']['name'];
         $uploadFile = $uploadDir . $uniqueFilename;
 
-        $allowedExtensions = array("jpg", "jpeg", "png", "gif");
+        $allowedExtensions = array("jpg", "jpeg", "png");
         $extension = strtolower(pathinfo($_FILES['post_photo']['name'], PATHINFO_EXTENSION));
 
         if (!in_array($extension, $allowedExtensions) || $_FILES['post_photo']['size'] > $maxFileSize) {
@@ -64,7 +64,7 @@ if (isset($_FILES['post_photo']) && $_FILES['post_photo']['error'] === 0) {
                     $imagick->setImageFormat('webp');
 
                     // Устанавливаем качество (необязательно)
-                    $imagick->setCompressionQuality(75);
+                    $imagick->setCompressionQuality(50);
 
                     // Сохраняем изображение в формате WebP
                     $imagick->writeImage($webpFile);

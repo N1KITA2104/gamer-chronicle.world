@@ -147,7 +147,6 @@ main img {
 
 .footer-link {
     margin: 0.5rem;
-    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -161,10 +160,14 @@ main img {
 }
 
 
-a {
+.description a {
     color: white;
     text-decoration: none !important;
     transition: ease-out .25s;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 a:hover {
@@ -282,38 +285,33 @@ a:hover {
     align-items: center;
 }
 
-.current-page {
-    padding: 4px 8px;
-    font-size: 1em;
-    font-weight: bold;
-    background-color: #222628;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 2px;
-    cursor: default;
-    margin: 4px;
-    transition: background-color 0.3s ease;
-    text-align: center; 
+.pagination > li > a
+{
+    background-color: white;
+    color: #D96C6C;
 }
 
-.load-more-news {
-    padding: 4px 8px;
-    font-size: 1em;
-    font-weight: bold;
-    background-color: #515154;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    margin: 4px;
-    transition: background-color .35s ease-in-out;
-    text-align: center;
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #D96C6C;
+    background-color: #eee;
+    border-color: #ddd;
 }
 
-.load-more-news:hover {
+.pagination > .active > a
+{
+    color: white;
     background-color: #D96C6C;
+    border: solid 1px #D96C6C;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #D96C6C;
+    border: solid 1px #D96C6C;
 }
 
 .edit-button {
@@ -410,7 +408,7 @@ a:hover {
 
 .reaction-btn-positive {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 6px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -418,7 +416,7 @@ a:hover {
 
 .reaction-btn-negative {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 6px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -451,7 +449,7 @@ hr {
     height: 3px; 
 }
 
- /*Анімація фона сайту*/
+ /*Анімація фона сайту */
 
 .stars-in-space {
     position: fixed;

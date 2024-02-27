@@ -7,7 +7,7 @@ use Carbon\Carbon;
 include("config/db_config.php");
 $user_id = intval($_GET['id']);
 
-$sql_posts = "SELECT COUNT(*) AS post_count FROM posts WHERE author_id = $user_id";
+$sql_posts = "SELECT COUNT(*) AS post_count FROM posts WHERE author_id = $user_id AND visible = 1";
 $result_posts = $db->query($sql_posts);
 $post_count = $result_posts->fetch_assoc()['post_count'];
 

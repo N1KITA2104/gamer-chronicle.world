@@ -29,6 +29,7 @@ if ($user_id !== null) {
                                     <img class="border-red rounded-circle object-fit-cover" src="<?= (!empty($profile_info['img']) ? 'uploads/profiles/' . $profile_info['img'] : 'https://udhtu.edu.ua/wp-content/uploads/2021/12/avatar-user.jpg') ?>" alt="Profile Picture" style="width: 100px; height: 100px;">
                                     <h4 class="card-title mt-3 mb-3"><?= $profile_info['nick_name'] ?></h4>
                                 </div>
+
                                 <div class="p-4" style="background-color: rgba(0,0,0,0.25)">
                                     <p class="card-text">Локація: <?= $profile_info['geo_position'] ?></p>
                                     <p class="card-text">Стать: <?= $sex_icon ?></p>
@@ -69,8 +70,10 @@ if ($user_id !== null) {
                                 </div>
 
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="profile-about mb-3 mt-3 p-3">
-                                        <p class="card-text bg-dark p-4 text-light"><?= (!empty($profile_info['description']) ? $profile_info['description'] : 'Опис відсутній') ?></p>
+                                    <div class="profile-about mb-3 mt-3 p-3 ps-5 bg-light rounded">
+                                        <p class="card-text">
+                                            <?= (!empty($profile_info['description']) ? $profile_info['description'] : 'Опис відсутній') ?>
+                                        </p>
                                     </div>
                                 </div>
 

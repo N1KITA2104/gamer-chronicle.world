@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand d-flex" href="index.php?action=Main">
-            <img class="me-2" src="img/icon_logo.svg" alt="GamerChronicle" width="30px" height="30px">
+            <img class="me-2" src="img/icon_logo.svg" alt="Logo" width="30px" height="30px">
             <span class="logo-font" style="color: #D96C6C">GamerChronicle</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <button class="navbar-toggler" type="button" title="Випадне меню" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">

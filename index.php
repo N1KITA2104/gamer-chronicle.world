@@ -12,7 +12,6 @@ if (file_exists($viewFile)) {
     require_once($viewFile);
 } else {
     require_once('views/Main.php');
-    echo 'File not found: ' . htmlspecialchars($action) . '.php';
 }
 
 require_once("layout/StarsAnimation.php");

@@ -4,5 +4,4 @@
         <button class="btn btn-primary btn-sm mt-2" id="accept-cookies">Прийняти</button>
     </div>
 </div>
-
 <script src="js/cookieAccept.js"></script>

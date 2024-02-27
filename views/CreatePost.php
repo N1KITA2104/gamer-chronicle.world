@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $image = imagecreatefromstring(file_get_contents($uploadFile));
 
             if ($extension === 'jpg' || $extension === 'jpeg') {
-                imagewebp($image, $webpFile, 75);
+                imagewebp($image, $webpFile, 50);
             } elseif ($extension === 'png') {
                 // Путь к PNG-файлу
                 $pngFile = $uploadFile;
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $webpFile = 'uploads/posts/' . pathinfo($uniqueFilename, PATHINFO_FILENAME) . '.webp';
                 
                 // Команда для конвертации PNG в WebP с помощью cwebp
-                $command = "cwebp -q 75 $pngFile -o $webpFile";
+                $command = "cwebp -q 50 $pngFile -o $webpFile";
                 // Выполнение команды
                 exec($command);
                 

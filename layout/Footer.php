@@ -1,14 +1,14 @@
     <footer class="container-fluid bg-dark text-light py-2">
         <div class="container">
             <div class="row mt-4 mb-4">
-                <div class="col-md-8">
+                <div class="col-md-8 mb-3">
                     <p>
                         <small>
                             Copyright © 2024<br>
                         </small>
-                        <small class="text-secondary">
+                        <small class="text-light">
                             Усі права захищені. Використання матеріалів сайту можливе лише з прямим посиланням на джерело. <br>
-                            <span style="color: #D96C6C">Project «GamerChronicle»</span>
+                            <span class="text-danger">Project «GamerChronicle»</span>
                         </small>
                     </p>
                     <ul class="nav">
@@ -24,9 +24,9 @@
                     </ul>
                 </div>
 
-                <div class="col-md-4">
-                    <h5 class="text-secondary">Про нас</h5>
-                    <ul class="nav flex-column">
+                <div class="col-md-4 mb-3">
+                    <h2 class="text-danger">Про нас</h2>
+                    <ul class="nav flex-column description">
                         <li class="nav-item">
                             <a class="footer-link" title="Про сайт" href="index.php?action=About">Про сайт</a>
                         </li>
@@ -37,7 +37,7 @@
                             <a class="footer-link" title="Умови використання" href="index.php?action=TermsOfService">Умови використання</a>
                         </li>
                         <li class="nav-item">
-                            <a class="footer-link" title="Рекалама" href="index.php?action=Advertisement">Реклама</a>
+                            <a class="footer-link" title="Реклама" href="index.php?action=Advertisement">Реклама</a>
                         </li>
                     </ul>
                 </div>

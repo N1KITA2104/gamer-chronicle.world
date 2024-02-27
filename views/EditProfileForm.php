@@ -1,17 +1,18 @@
 <main class="container bg-light p-5">
     <div class="edit-profile">
-        <h1 class="display-4 mb-5 bg-dark text-light p-4">Налаштування профілю</h1>
-        <div class="profile-picture">
+        <h1 class="display-4 mb-3 bg-dark text-light p-4">Налаштування профілю</h1>
+        <div class="profile-picture text-center mb-3">
             <?php
                 global $user_id;
                 if (!empty($profile_info['img'])) {
-                    echo '<img src="uploads/profiles/' . $profile_info['img'] . '" alt="Profile Picture">';
+                    echo '<img class="border-red rounded-circle object-fit-cover" height="150px" src="uploads/profiles/' . $profile_info['img'] . '" alt="Profile Picture">';
                 } else {
-                    echo '<img src="img/user-ico.png" alt="Profile Picture">';
+                    echo '<img class="border-red rounded-circle object-fit-cover" height="150px" src="img/user-ico.png" alt="Profile Picture">';
                 }
-                echo '<a href="index.php?action=Profile&id=' . $user_id .'"><span class="text-dark">' . $profile_info['nick_name'] . '</span></a><br>';
+                echo '<div class="p-3"><a href="index.php?action=Profile&id=' . $user_id .'"><span class="text-dark display-6">' . $profile_info['nick_name'] . '</span></a></div>';
             ?>
         </div>
+
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link text-dark active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Профіль</button>
