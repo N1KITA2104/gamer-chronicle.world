@@ -87,7 +87,7 @@ if (empty($_SESSION['user_id'])) {
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-header bg-dark text-light py-4">
-                        <h1 class="text-center display-6">Реєстрація облікового запису</h4>
+                        <h1 class="text-center display-6">Реєстрація облікового запису</h1>
                     </div>
                     <div class="card-body">
                         <form method="post" class="p-3">

@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header bg-dark text-light py-4">
-                        <h1 class="text-center display-6">Вхід до облікового запису</h4>
+                        <h1 class="text-center display-6">Вхід до облікового запису</h1>
                     </div>
                     <form method="post" class="p-4">
                         <div class="form-group mb-3">
