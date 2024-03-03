@@ -63,10 +63,10 @@ for ($i = 0; $row = mysqli_fetch_assoc($result); $i++) {
     // Если у пользователя есть сессия и его уровень доступа равен 1, добавляем кнопки для редактирования и удаления поста
     if (!empty($_SESSION) && $_SESSION['user_access_type'] === 1) {
         echo '<div class="service-buttons">
-                <button class="edit-button" onclick="window.location.href = \'index.php?action=EditPost&id=' . $row['post_id'] . '\'">
+                <button class="edit-button" title="Редагувати пост" onclick="window.location.href = \'index.php?action=EditPost&id=' . $row['post_id'] . '\'">
                     <i class="fas fa-edit"></i>
                 </button>
-                <button class="edit-button" onclick="window.location.href = \'index.php?action=ConfirmDeletePost&id=' . $row['post_id'] . '\'">
+                <button class="edit-button" title="Видалити пост" onclick="window.location.href = \'index.php?action=ConfirmDeletePost&id=' . $row['post_id'] . '\'">
                     <i class="fas fa-trash-alt"></i> 
                 </button>
             </div>';

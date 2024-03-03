@@ -1,4 +1,4 @@
-    <footer class="container-fluid bg-dark text-light py-2">
+    <footer class="container bg-dark text-light py-2">
         <div class="container">
             <div class="row mt-4 mb-4">
                 <div class="col-md-8 mb-3">
@@ -8,7 +8,7 @@
                         </small>
                         <small class="text-light">
                             Усі права захищені. Використання матеріалів сайту можливе лише з прямим посиланням на джерело. <br>
-                            <span class="text-danger">Project «GamerChronicle»</span>
+                            <span>Project «GamerChronicle»</span>
                         </small>
                     </p>
                     <ul class="nav">

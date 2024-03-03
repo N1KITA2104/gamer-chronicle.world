@@ -9,24 +9,14 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav d-flex align-items-center">
-            <!-- Search Form -->
                 <li class="nav-item pe-3">
                     <form class="d-flex">
                         <input class="form-control me-2" id="search" type="search" placeholder="Пошук по сайту..." aria-label="Search">
-                        <button class="btn btn-outline-danger" type="submit">Пошук</button>
+                        <button class="btn btn-danger" type="submit">Пошук</button>
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Новини" href="index.php?action=News">Новини</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" title="Ігри" href="index.php?action=Games">Ігри</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" title="Гайди" href="index.php?action=Guide">Гайди</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" title="Галерея" href="index.php?action=Gallery">Галерея</a>
+                    <a class="nav-link" title="Новини" href="index.php?action=News">Всі новини</a>
                 </li>
                 <?php
                 global $db;

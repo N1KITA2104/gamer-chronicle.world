@@ -17,14 +17,14 @@ $post_id = intval($_GET['id']);
         <?php if (!empty($_SESSION)): ?>
             <form id="commentForm" class="mt-3">
                 <input type="hidden" name="<?php echo $post_id; ?>" value="<?php echo $post_id; ?>">
-                <div class="mb-3">
-                    <label for="comment" class="form-label"><b>Ваш коментар</b></label>
+                <div class="mb-3 bg-dark text-light p-3 rounded-bottom">
+                    <label for="comment" class="form-label p-2"><b>Ваш коментар</b></label>
                     <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Тут може бути ваш коментар..." required></textarea>
                 </div>
                 <button type="button" class="btn btn-danger" onclick="addComment()">Коментувати</button>
             </form>
         <?php else: ?>
-            <p class="bg-dark text-light mt-3 p-3 rounded"><a class="footer-link" href="index.php?action=login"><b>Авторизуйтесь</b></a>, щоб залишити коментар.</p>
+            <p class="bg-dark text-light mt-3 p-3 rounded"><a class="footer-link" href="index.php?action=Login"><b>Авторизуйтесь</b></a>, щоб залишити коментар.</p>
         <?php endif; ?>
     </section>
 </article>

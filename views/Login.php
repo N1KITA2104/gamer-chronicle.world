@@ -35,18 +35,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <main class="container">
     <?php if (empty($_SESSION)) : ?>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mb-3">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header bg-dark text-light py-4">
-                        <h4 class="text-center">Вхід до облікового запису</h4>
+                        <h1 class="text-center display-6">Вхід до облікового запису</h4>
                     </div>
                     <form method="post" class="p-4">
-                        <div class="form-floating mb-3">
-                            <input type="text" id="login_or_email" name="login_or_email" class="form-control" required autocomplete>
-                            <label for="login_or_email" class="form-label">Логін або Email</label>
+                        <div class="form-group mb-3">
+                            <label for="login_or_email" class="form-label">Login або email</label>
+                            <input type="text" id="login_or_email" name="login_or_email" class="form-control" placeholder="Введіть login або email" required autocomplete>
                         </div>
-                        <div class="form-group mb-2">
+                        <div class="form-group mb-3">
                             <label for="password">Пароль</label>
                             <div class="input-group">
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Введіть пароль" required autocomplete>
@@ -57,12 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group form-check mb-1">
+                        <div class="form-group form-check mb-3">
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label" for="remember">Запам'ятай мене!</label>
                         </div>
                         <input class="btn btn-danger" type="submit" value="Увійти">
-                        <a class="created-account m-4" href="index.php?action=registration">У мене немає аккаунту</a>
+                        <a class="created-account m-4" href="index.php?action=Registration">У мене немає аккаунту</a>
                         <?php if (!empty($login_errors)) : ?>
                             <span class='text-danger'>Невірний логін або пароль.</span><br>
                         <?php endif; ?>

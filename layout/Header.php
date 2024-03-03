@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Вітаємо в GamerChronicle - вашому особливому просторі для обміну враженнями і досвідом в світі відеоігор. 
     Долучайтеся до нашого форуму, обговорюйте гіркі та солодкі моменти геймінгу, дізнавайтеся останні новини галузі та знаходьте справжніх прихильників разом з нами.">
+    <meta name="theme-color" content="#333333">
 
-    <link rel="icon" href="img/icon_logo.svg" type="image/x-icon">
+    <link rel="icon" href="img/icon_logo.svg" type="image/svg+xml">
+    <link rel="manifest" href="config/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,5 +33,5 @@
 <body>
 <button class="d-flex justify-content-center align-items-center" id="scrollToTopBtn" title="Піднятися!"></button>
 <header>
-
+    <link rel="canonical" href="https://gamer-chronicle.world">
 </header>

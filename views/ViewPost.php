@@ -45,8 +45,8 @@ if ($post_time->isToday()) {
 
 ?>
 
-<main class="container bg-light p-3 pb-3 mb-5">
-    <article class="">
+<main class="container bg-light p-3 pb-3">
+    <article>
         <header class="bg-dark text-light p-3 m-2 me-5"
                 style="border-bottom: 10px solid #D96C6C;
                        border-left: 10px solid transparent;">
@@ -65,11 +65,9 @@ if ($post_time->isToday()) {
             </section>
             <h6 class="mb-3"><?php echo $row['post_description']; ?></h6>
             <hr>
-            <div id="post-article" class="container-fluid"><?php echo $row['post_article']; ?></div>
+            <div id="post-article post" class="container-fluid"><?php echo $row['post_article']; ?></div>
         </section>
-    </article>
-
-    <article>
+        <article>
         <?php
         include("config/db_config.php");
 
@@ -92,10 +90,10 @@ if ($post_time->isToday()) {
             $statement->close();
         }
         ?>
-        <section class="mb-3 col d-flex flex-column align-items-center section-container p-2 mt-3">
+        <section class="mb-3 d-flex flex-column align-items-center section-container p-2 pe-3 mt-3">
             <?php if (!empty($_SESSION) && $_SESSION['user_access_type'] === 1): ?>
-                <button class="btn btn-danger mb-2" title="Редагувати пост" onclick="window.location.href = 'index.php?action=EditPost&id=<?php echo $row['post_id']; ?>';"><i class="fas fa-edit"></i></button>
-                <button class="btn btn-danger mb-2" id="deleteForm" title="Видалити пост" onclick="window.location.href = 'index.php?action=ConfirmDeletePost&id=<?php echo $row['post_id']; ?>';"><i class="fas fa-trash-alt"></i> </button>
+                <button style="height:32px;width:32px" class="btn btn-danger mb-2 d-flex align-items-center justify-content-center" title="Редагувати пост" onclick="window.location.href = 'index.php?action=EditPost&id=<?php echo $row['post_id']; ?>';"><i class="fas fa-edit"></i></button>
+                <button style="height:32px;width:32px"  class="btn btn-danger mb-2 d-flex align-items-center justify-content-center" id="deleteForm" title="Видалити пост" onclick="window.location.href = 'index.php?action=ConfirmDeletePost&id=<?php echo $row['post_id']; ?>';"><i class="fas fa-trash-alt"></i> </button>
             <?php endif; ?>
             <div class="bg-dark-subtle rounded d-flex flex-column align-items-center">
             <?php if (!empty($_SESSION)) : ?>
@@ -110,10 +108,11 @@ if ($post_time->isToday()) {
                 </span>
             </div>
                 <?php if ($reaction !== null) : ?>
-                    <button class="btn btn-danger mt-2" id="cancelVoteBtn" title="Відмінити голос" onclick="vote('cancel')"><i class="fas fa-times p-1"></i></button>
+                    <button class="btn btn-danger mt-2" id="cancelVoteBtn" title="Відмінити голос" onclick="vote('cancel')"><i class="fas fa-times"></i></button>
                 <?php endif; ?>
             <?php endif; ?>
         </section>
+    </article>
     </article>
     <?php include("views/CommentsBlock.php"); ?>
 </main>

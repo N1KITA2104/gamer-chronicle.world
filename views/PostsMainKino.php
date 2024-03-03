@@ -36,10 +36,10 @@ $result = mysqli_query($db, $query);
 
             <?php if (!empty($_SESSION) && $_SESSION['user_access_type'] === 1): ?>
                 <div class="service-buttons">
-                    <button class="edit-button" onclick="window.location.href = 'index.php?action=EditPost&id=<?= $row['post_id'] ?>'">
+                    <button class="edit-button" title="Редагувати пост" onclick="window.location.href = 'index.php?action=EditPost&id=<?= $row['post_id'] ?>'">
                         <i class="fas fa-edit"></i>
                     </button>
-                    <button class="edit-button" onclick="window.location.href = 'index.php?action=ConfirmDeletePost&id=<?= $row['post_id'] ?>'">
+                    <button class="edit-button" title="Видалити пост" onclick="window.location.href = 'index.php?action=ConfirmDeletePost&id=<?= $row['post_id'] ?>'">
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </div>

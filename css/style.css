@@ -96,7 +96,7 @@ main {
     z-index: 1;
     position: relative;
     flex: 1;
-    margin-top: 66px;
+    margin-top: 60px;
     padding-top: 20px;
 }
 
@@ -296,7 +296,7 @@ a:hover {
 .pagination > li > span:focus,
 .pagination > li > span:hover
 {
-    color: #D96C6C;
+    color: black;
     background-color: #eee;
     border-color: #ddd;
 }
