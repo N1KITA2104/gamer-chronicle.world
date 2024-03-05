@@ -11,5 +11,3 @@ $db = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$db) {
     die("Error connecting to the database: " . mysqli_connect_error());
 }
-
-# Конфігураційний файл

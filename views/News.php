@@ -1,9 +1,10 @@
 <main class="container bg-light p-3">
     <article>
         <header>
-            <h1 class="display-4">Всі новини GamerChronicle</h1>
+            <h1 class="bg-dark text-light display-4 p-4" 
+                style="border-bottom: 10px solid #D96C6C;
+                        border-left: 10px solid transparent">Всі новини GamerChronicle</h1>
         </header>
-        <hr>
         <section class="all-news-container mb-5">
             <?php
             global $db;

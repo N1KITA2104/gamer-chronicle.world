@@ -86,11 +86,11 @@ if (empty($_SESSION['user_id'])) {
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mb-3">
-                    <div class="card-header bg-dark text-light py-4">
-                        <h1 class="text-center display-6">Реєстрація облікового запису</h1>
+                    <div class="card-header bg-dark text-light p-4">
+                        <h1 class="text-center display-6">Реєстрація облікового запису</h4>
                     </div>
                     <div class="card-body">
-                        <form method="post" class="p-3">
+                        <form method="post" class="p-4">
                             <?php if (!empty($errors)) : ?>
                                 <div class="alert alert-danger" role="alert">
                                     <ul style="list-style-type: none;">

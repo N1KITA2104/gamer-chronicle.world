@@ -38,10 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="row justify-content-center mb-3">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header bg-dark text-light py-4">
+                    <div class="card-header bg-dark text-light p-4">
                         <h1 class="text-center display-6">Вхід до облікового запису</h1>
                     </div>
-                    <form method="post" class="p-4">
+                    <form method="post" class="p-5">
                         <div class="form-group mb-3">
                             <label for="login_or_email" class="form-label">Login або email</label>
                             <input type="text" id="login_or_email" name="login_or_email" class="form-control" placeholder="Введіть login або email" required autocomplete>
@@ -61,12 +61,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label" for="remember">Запам'ятай мене!</label>
                         </div>
-                        <input class="btn btn-danger" type="submit" value="Увійти">
-                        <a class="created-account m-4" href="index.php?action=Registration">У мене немає аккаунту</a>
+                        <div class="row">
+                            <input class="btn btn-danger" type="submit" value="Увійти">
+                        </div>
                         <?php if (!empty($login_errors)) : ?>
                             <span class='text-danger'>Невірний логін або пароль.</span><br>
                         <?php endif; ?>
                     </form>
+                    <div class="card-footer row p-4">
+                        <a class="created-account" href="index.php?action=Registration">У мене немає аккаунту</a>
+                        <a class="forgot-password" href="index.php?action=ForgotPassword">Забули пароль?</a>
+                    </div>
                 </div>
             </div>
         </div>
