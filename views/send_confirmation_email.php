@@ -5,7 +5,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php'; 
 
-function generateConfirmationCode($email, $db) {
+function generateConfirmationCode($email, $db): false|string
+{
     $email = mysqli_real_escape_string($db, $email);
     
     $confirmation_code = substr(md5(uniqid(mt_rand(), true)), 0, 6);
@@ -21,7 +22,8 @@ function generateConfirmationCode($email, $db) {
     }
 }
 
-function sendConfirmationEmail($recipient_email, $confirmation_code) {
+function sendConfirmationEmail($recipient_email, $confirmation_code): bool
+{
     $mail = new PHPMailer(true);
     
     try {
@@ -36,13 +38,13 @@ function sendConfirmationEmail($recipient_email, $confirmation_code) {
         $mail->setFrom('admin@gamer-chronicle.world', 'GamerChronicle email confirmation'); 
         $mail->addAddress($recipient_email); 
         
-        $mail->isHTML(true);
+        $mail->isHTML();
         $mail->Subject = 'Email confirmation code';
         $mail->Body = 'Your confirmation code: ' . $confirmation_code;
         
         $mail->send();
         return true;
-    } catch (Exception $e) {
+    } catch (Exception) {
         error_log("Mail sending error: " . $mail->ErrorInfo);
         return false;
     }
@@ -64,5 +66,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"])) {
 } else {
     echo "invalid_request";
 }
-
-?>

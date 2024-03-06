@@ -5,17 +5,17 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php'; 
 
-function generateConfirmationCode($email, $db) {
+function generateConfirmationCode($email, $db): false|string
+{
     $email = mysqli_real_escape_string($db, $email);
-    
-    // Проверка наличия пользователя с указанным email
+
     $check_user_query = $db->prepare("SELECT email FROM users WHERE email = ?");
     $check_user_query->bind_param("s", $email);
     $check_user_query->execute();
     $check_user_result = $check_user_query->get_result();
     
     if ($check_user_result->num_rows == 0) {
-        return "user_not_found"; // Возвращаем специальный код ошибки
+        return "user_not_found";
     }
     
     $confirmation_code = substr(md5(uniqid(mt_rand(), true)), 0, 6);
@@ -31,7 +31,8 @@ function generateConfirmationCode($email, $db) {
     }
 }
 
-function sendConfirmationEmail($recipient_email, $confirmation_code) {
+function sendConfirmationEmail($recipient_email, $confirmation_code): bool
+{
     $mail = new PHPMailer(true);
     
     try {
@@ -46,13 +47,13 @@ function sendConfirmationEmail($recipient_email, $confirmation_code) {
         $mail->setFrom('admin@gamer-chronicle.world', 'GamerChronicle change password'); 
         $mail->addAddress($recipient_email); 
         
-        $mail->isHTML(true);
+        $mail->isHTML();
         $mail->Subject = 'Change password confirmation code';
         $mail->Body = 'Your confirmation code: ' . $confirmation_code;
         
         $mail->send();
         return true;
-    } catch (Exception $e) {
+    } catch (Exception) {
         error_log("Mail sending error: " . $mail->ErrorInfo);
         return false;
     }
@@ -64,8 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"])) {
     $email = $_POST["email"];
     
     $generated_code = generateConfirmationCode($email, $db);
-    if ($generated_code == "user_not_found") { // Проверка специального кода ошибки
-        echo "user_not_found"; // Возвращаем код ошибки
+    if ($generated_code == "user_not_found") {
+        echo "user_not_found";
     } elseif ($generated_code && sendConfirmationEmail($email, $generated_code)) {
         echo 'success';
     } else {
@@ -76,5 +77,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"])) {
 } else {
     echo "invalid_request";
 }
-
-?>

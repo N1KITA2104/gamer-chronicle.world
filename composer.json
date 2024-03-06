@@ -4,6 +4,7 @@
         "ext-mysqli": "*",
         "ext-gd": "*",
         "nesbot/carbon": "^3.0",
-        "phpmailer/phpmailer": "^6.9"
+        "phpmailer/phpmailer": "^6.9",
+        "ext-imagick": "*"
     }
 }

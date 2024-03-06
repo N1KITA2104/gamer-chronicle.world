@@ -2,18 +2,18 @@
 session_start();
 
 require_once("vendor/autoload.php");
-require_once("layout/Header.php");
-require_once("layout/NavigationBar.php");
+require_once("layout/header.php");
+require_once("layout/navigation_bar.php");
 
-$action = $_GET['action'] ?? 'Main';
+$action = $_GET['action'] ?? 'main';
 $viewFile = "views/" . htmlspecialchars($action) . '.php';
 
 if (file_exists($viewFile)) {
     require_once($viewFile);
 } else {
-    require_once('views/Main.php');
+    require_once('views/main.php');
 }
 
-require_once("layout/StarsAnimation.php");
-require_once("layout/Cookie.php");
-require_once("layout/Footer.php");
+require_once("templates/stars_animation.php");
+require_once("layout/cookie.php");
+require_once("layout/footer.php");
