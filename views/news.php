@@ -20,13 +20,13 @@ $page = $_GET['page'] ?? 1;
             </div>
             <div class="form-group">
                 <label for="search">Пошук за назвою:</label>
-                <input type="text" class="form-control" id="search" name="search">
+                <input type="text" class="form-control" id="search" name="search" placeholder="Введіть щось для пошуку...">
             </div>
             <div class="form-group mb-3">
                 <label for="date">Дата:</label>
                 <input type="date" class="form-control" id="date" name="date">
             </div>
-            <button type="submit" class="btn btn-primary">Застосувати фільтр</button>
+            <button type="submit" class="btn btn-danger">Застосувати фільтр</button>
             <button type="button" class="btn btn-secondary" onclick="resetFilters()">Скинути фільтри</button>
         </form>
     </aside>
@@ -87,7 +87,7 @@ $page = $_GET['page'] ?? 1;
                     </div>
                     ${post.visible !== null && post.visible === 0 ?
                 `<div style="position: absolute; top: 10px; right: 10px">
-                            <span class="badge bg-danger" style="border-radius: 2px; padding: 4px; font-size: 12px">На розгляді</span>
+                            <span class="badge bg-success" style="border-radius: 2px; padding: 4px; font-size: 12px">На розгляді</span>
                         </div>
                         <div style="position: absolute; top: 40px; right: 10px">
                             <span class="badge bg-danger" style="border-radius: 2px; padding: 4px; font-size: 12px">${post.category_name}</span>
@@ -116,8 +116,14 @@ $page = $_GET['page'] ?? 1;
                             <img src="img/clock-icon.svg" width="20px" height="20px" alt="Дата: "><span title="Дата та час публікації">${post.formattedDate}</span>
                         </div>
                         <div class="col-sm-2 text-right">
-                            <img src="img/comments.svg" width="16px" height="16px" title="Коментарі" alt="Коментарі: "><span>${post.comment_count}</span><br>
-                            <img src="img/rating.svg" width="16px" height="16px" title="Рейтинг" alt="Рейтинг: "><span>${post.total_rating}</span>
+                            <div class="d-flex align-items-center">
+                                <img src="img/comments.svg" width="16px" height="16px" title="Коментарі" alt="Коментарі:">
+                                <span>${post.comment_count}</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="img/rating.svg" width="16px" height="16px" title="Рейтинг" alt="Рейтинг:">
+                                <span>${post.total_rating}</span>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -49,7 +49,7 @@ $result_recent_activities = $db->query($sql_recent_activities);
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 p-4 bg-light border border-dark-subtle">
+        <div class="col-md-6 p-4 bg-light border border-end-0 rounded-start">
             <h3 class="text-body-secondary">Сумарна активність</h3>
             <ul class="list-group">
                 <li class="list-group-item">Кількість постів: <?php echo $post_count; ?></li>
@@ -58,7 +58,7 @@ $result_recent_activities = $db->query($sql_recent_activities);
             </ul>
         </div>
 
-        <div class="col-md-6 p-4 bg-light border border-dark-subtle">
+        <div class="col-md-6 p-4 bg-light border border-1 rounded-end">
             <h3>Остання активність</h3>
             <ul class="list-group">
                 <?php

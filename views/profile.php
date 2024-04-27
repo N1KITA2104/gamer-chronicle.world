@@ -28,7 +28,7 @@ if ($user_id !== null) {
                             <h4 class="card-title mt-3 mb-3"><?= $profile_info['nick_name'] ?></h4>
                         </div>
 
-                        <div class="p-4" style="background-color: rgba(0,0,0,0.25)">
+                        <div class="p-4 rounded-2" style="background-color: rgba(0,0,0,0.25)">
                             <p class="card-text">Локація: <?= $profile_info['geo_position'] ?></p>
                             <p class="card-text">Стать: <?= $sex_icon ?></p>
                             <p class="card-text">Дата реєстрації: <?= date('j F Y', strtotime($profile_info['reg_date'])) ?></p>

@@ -36,6 +36,7 @@ if (mysqli_num_rows($result) > 0) {
 
         $author_name = $row_author['nick_name'];
         $img = $row_author['img'];
+        $author_id = $row["author_id"];
 
         // Query to get comment count for the post
         $query_comments_count = "SELECT COUNT(*) AS comment_count FROM comments WHERE post_id = " . $row['post_id'];
@@ -62,7 +63,8 @@ if (mysqli_num_rows($result) > 0) {
             'img' => $img,
             'formattedDate' => $formattedDate, // Include the formatted date
             'comment_count' => $comment_count,
-            'total_rating' => $total_rating
+            'total_rating' => $total_rating,
+            'author_id' => $author_id
         ];
     }
 }

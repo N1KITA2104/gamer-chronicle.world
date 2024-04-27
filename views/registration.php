@@ -199,6 +199,6 @@ if (empty($_SESSION['user_id'])) {
 
     <?php
 } else {
-    include('layout/page_not_found.php');
+    include('templates/page_not_found.php');
 }
 ?>

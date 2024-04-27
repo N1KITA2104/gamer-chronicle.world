@@ -83,6 +83,7 @@ if (mysqli_num_rows($result) > 0) {
             'visible' => $row['visible'] ?? null,
             'category_name' => $row['category_name'],
             'author_name' => $author_name,
+            'author_id' => $row['author_id'],
             'img' => $img,
             'formattedDate' => $formattedDate,
             'comment_count' => $comment_count,

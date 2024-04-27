@@ -55,8 +55,8 @@ if ($post_time->isToday()) {
         <section class="mb-3 mt-3 p-2">
             <div class="text-center p
             me-5">
-                <div class="d-flex justify-content-center">
-                    <img src="<?php echo $row['post_photo']; ?>" alt="<?php echo $row['post_title']; ?>" class="img-fluid" style="width: 100vw">
+                <div class="d-flex justify-content-center news-image-container">
+                    <img src="<?php echo $row['post_photo']; ?>" alt="<?php echo $row['post_title']; ?>" class="img-fluid news-image" style="width: 100vw">
                 </div>
             </div>
             <section id="post-title" class="bg-dark description text-light p-3 post-details mb-3 me-5">

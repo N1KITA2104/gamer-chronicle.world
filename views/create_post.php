@@ -31,13 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $uniqueFilename = uniqid() . '_' . $_FILES['post_photo']['name'];
         $uploadFile = $uploadDir . $uniqueFilename;
 
-        $allowedExtensions = array("jpg", "jpeg", "png", "gif");
+        $allowedExtensions = array("jpg", "jpeg", "png");
         $extension = strtolower(pathinfo($_FILES['post_photo']['name'], PATHINFO_EXTENSION));
 
         if (!in_array($extension, $allowedExtensions)) {
-            $errors[] = 'Непідтримуваний формат зображення або розмір файлу перевищує 2 МБ. Підтримувані формати: JPG, JPEG, PNG, GIF.';
+            $errors[] = 'Непідтримуваний формат зображення або розмір файлу перевищує 2 МБ. Підтримувані формати: JPG, JPEG, PNG.';
         } elseif ($_FILES['post_photo']['size'] > $maxFileSize) {
-            $errors[] = 'Непідтримуваний формат зображення або розмір файлу перевищує 2 МБ. Підтримувані формати: JPG, JPEG, PNG, GIF.';
+            $errors[] = 'Непідтримуваний формат зображення або розмір файлу перевищує 2 МБ. Підтримувані формати: JPG, JPEG, PNG.';
         } elseif (move_uploaded_file($_FILES['post_photo']['tmp_name'], $uploadFile)) {
             $webpFile = 'uploads/posts/' . pathinfo($uniqueFilename, PATHINFO_FILENAME) . '.webp';
             $image = imagecreatefromstring(file_get_contents($uploadFile));
@@ -55,10 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     $errors[] = 'Помилка конвертації PNG в WebP.';
                 }
-            } elseif ($extension === 'gif') {
-                $image = imagecreatefromstring(file_get_contents($uploadFile));
-                imagepng($image, $webpFile);
-                imagedestroy($image);
             }
 
             imagedestroy($image);

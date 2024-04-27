@@ -10,10 +10,25 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav d-flex align-items-center">
                 <li class="nav-item pe-3">
-                    <form class="d-flex">
-                        <input class="form-control me-2" id="search" type="search" placeholder="Пошук по сайту..." aria-label="Search">
-                        <button class="btn btn-danger" type="submit">Пошук</button>
+                    <form class="d-flex" method="POST" id="searchForm">
+                        <input class="form-control me-2" id="search" type="search" placeholder="Пошук по сайту..." aria-label="Search" name="search">
                     </form>
+                    <script>
+                        $(document).ready(function() {
+                            $('#search').on('input', function() {
+                                var searchData = $(this).val();
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'views/search.php',
+                                    data: { search: searchData },
+                                    success: function(response) {
+                                        $('#searchResults').html(response); 
+                                    }
+                                });
+                            });
+                        });
+
+                    </script>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" title="Новини" href="index.php?action=news">Всі новини</a>
@@ -52,3 +67,4 @@
     </div>
 </nav>
 <div id="scroll-progress"></div>
+<div id="searchResults"></div>

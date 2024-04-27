@@ -33,7 +33,11 @@ if (!$comments_result || mysqli_num_rows($comments_result) == 0) {
         $html_code .= '<div class="row mb-3 align-items-center">';
         $html_code .= '<div class="col-auto">';
         $html_code .= '<a href="index.php?action=profile&id=' . $comment_row['user_id'] . '">';
-        $html_code .= '<img src="uploads/profiles/' . $comment_row['author_img'] . '" alt="' . $comment_row['author_name'] . '" height="40px" width="40px" style="object-fit: cover;" class="rounded-circle nav-img">';
+        if (!empty($comment_row['author_img']))
+        {$html_code .= '<img src="uploads/profiles/' . $comment_row['author_img'] . '" alt="' . $comment_row['author_name'] . '" height="40px" width="40px" style="object-fit: cover;" class="rounded-circle nav-img">';}
+        else {
+            $html_code .= '<img src="img/user-ico.png" alt="' . $comment_row['author_name'] . '" height="40px" width="40px" style="object-fit: cover;" class="rounded-circle nav-img">';
+        }
         $html_code .= '</a>';
         $html_code .= '</div>';
         $html_code .= '<div class="col">';
